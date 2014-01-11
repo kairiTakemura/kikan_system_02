@@ -1,3 +1,11 @@
 language: ruby
 rvm:
 - 2.0.0
+deploy:
+  provider: heroku
+  api_key:
+    secure: oOoJceA50DeVkwk4hbqVUbk6nlmwPGLB2G5Rwpwof7i1m0NwaxaqwDbP/HG/i2YyTfkjB5vGIN4WMfVMVrE0mta6SxNvMQjDCDVdHbC8inWIyPXsCJAOEFe+t/ePUsIs0DZnlp8lOLu0YiTqylmSWoZ/0DltRgPDaidQki0Mb3g=
+  app: stormy-badlands-5049
+  on:
+    repo: kairiTakemura/kikan_system_02
+  run: "rake db:migrate"
